@@ -1,0 +1,1161 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Configurações do cabeçalho -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotofacil-independencia-2024</title>
+    <!-- Link para a biblioteca de estilos SweetAlert -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.css">
+    <style>
+        /* Estilos gerais para o corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(90deg, rgba(88, 88, 215, 1) 0%, rgba(0, 212, 255, 1) 100%);
+                user-select: none; /* Impede a seleção de texto */
+
+        }
+
+        /* Estilos para o cabeçalho */
+        .header {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 0;
+        }
+
+        /* Estilos para a imagem no cabeçalho */
+        .header img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        /* Estilos para o cabeçalho */
+        .header-1 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 0;
+        }
+
+        /* Estilos para a imagem no cabeçalho */
+        .header-1 img {
+            max-width: 80%;
+            height: auto;
+            display: block;
+        }
+
+        /* Estilos para o container principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Estilos para o container de vídeo */
+        .video-container {
+    display: flex; /* Usa flexbox para alinhar o conteúdo horizontalmente */
+    justify-content: center; /* Centraliza horizontalmente os itens no container */
+    align-items: center; /* Alinha verticalmente os itens no container */
+    gap: 10px; /* Espaçamento entre o vídeo e as setas */
+    margin: 20px 0; /* Espaçamento vertical */
+    position: relative; /* Define a posição relativa para que o conteúdo possa ser posicionado em relação a ele */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+.video-container iframe {
+    border-radius: 15px; /* Define bordas arredondadas para o vídeo */
+    overflow: hidden; /* Garante que o conteúdo do vídeo respeite o raio das bordas */
+}
+
+.arrow-left, .arrow-right {
+    font-size: 40px; /* Tamanho das setas */
+    color: #333; /* Cor das setas */
+    cursor: pointer; /* Muda o cursor para indicar interatividade */
+    transition: transform 0.3s ease, color 0.3s ease; /* Transição suave para a animação */
+}
+
+.arrow-left:hover, .arrow-right:hover {
+    transform: scale(1.1); /* Aumenta a seta ao passar o mouse */
+    color: #ff6347; /* Muda a cor para mais chamativa */
+}
+
+.arrow-left {
+    margin-right: 10px; /* Espaço à direita da seta esquerda */
+}
+
+.arrow-right {
+    margin-left: 10px; /* Espaço à esquerda da seta direita */
+}
+
+
+        /* Estilos para a lista de loterias */
+        .lottery-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        /* Estilos para cada item de loteria */
+        .lottery-item {
+            width: calc(33.333% - 20px); /* Divisão do espaço em 3 colunas */
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        /* Estilos para imagens dentro dos itens de loteria */
+        .lottery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Estilos para o container dos botões */
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        /* Estilos para o botão de cota inteira */
+        .btn-cota-inteira {
+            flex: 1;
+            background-color: #ff6347;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            outline: none;
+        }
+
+        /* Estilos para o botão de cota inteira ao passar o mouse */
+        .btn-cota-inteira:hover {
+            background-color: #e55347;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+
+        /* Estilos para o botão de meia cota */
+        .btn-meia-cota {
+            flex: 1;
+            background-color: #ffdb4d;
+            color: black;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            outline: none;
+        }
+
+        /* Estilos para o botão de meia cota ao passar o mouse */
+        .btn-meia-cota:hover {
+            background-color: #e5c14d;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+
+        /* Estilos para o container de botões centrais */
+        .button-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        /* Estilos para o botão de visualizar regras */
+        .btn-ver-regras {
+            max-width: 100%;
+            background-color: red;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            font-size: 19px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: grow-shake 2s infinite;
+        }
+
+        /* Estilos para o botão de visualizar regras ao passar o mouse */
+        .btn-ver-regras:hover {
+            background-color: #E64A19;
+        }
+
+        /* Animação de crescimento e chacoalho */
+        @keyframes grow-shake {
+            0% {
+                transform: scale(1);
+            }
+
+            25% {
+                transform: scale(1.05);
+            }
+
+            50% {
+                transform: translate(0, -3px);
+            }
+
+            75% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Estilos para o botão do carrinho flutuante */
+        .btn-ver-carrinho {
+            background-color: #FFC107;
+            font-weight: bold;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            animation: cartPulse 2s infinite ease-in-out; /* Animação de pulsação contínua */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para efeito de profundidade */
+            transition: background-color 0.3s ease;
+        }
+
+        /* Estilos para o botão do carrinho ao passar o mouse */
+        .btn-ver-carrinho:hover {
+            background-color: #FFA000;
+        }
+
+        /* Animação de pulsação do botão do carrinho */
+        @keyframes cartPulse {
+            0%,
+            100% {
+                transform: scale(1); /* Tamanho original */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra normal */
+                background-color: #FFC107; /* Cor original */
+            }
+
+            50% {
+                transform: scale(1.1); /* Aumenta levemente */
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Sombra mais intensa */
+                background-color: #FFD54F; /* Cor mais clara */
+            }
+        }
+
+        /* Estilos para o botão de resetar carrinho */
+        .btn-reset-cart {
+            background-color: #F44336;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        /* Estilos para o botão de resetar carrinho ao passar o mouse */
+        .btn-reset-cart:hover {
+            background-color: #D32F2F;
+        }
+
+        /* Estilos para o ícone de lixeira */
+        .trash-icon {
+            cursor: pointer;
+            margin-left: 10px;
+            color: #F44336;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+
+        /* Estilos para o ícone de lixeira ao passar o mouse */
+        .trash-icon:hover {
+            color: #D32F2F;
+        }
+
+        /* Estilos para o contador do carrinho */
+        .cart-counter {
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 5px 10px;
+            font-size: 14px;
+            position: absolute;
+            top: -10px;
+            right: -10px;
+        }
+
+        /* Estilos para a mensagem de sucesso */
+        .success-message {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            z-index: 1001;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform: translateY(-20px);
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            animation: pulsate 1.5s infinite;
+        }
+
+        /* Animação de pulsação da mensagem de sucesso */
+        @keyframes pulsate {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Estilos para o botão de bônus */
+        .btn-bonus {
+            background-color: #FF9800;
+            color: white;
+            padding: 12px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos para o botão de bônus ao passar o mouse */
+        .btn-bonus:hover {
+            background-color: #FB8C00;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+
+        /* Estilos para telas menores */
+        @media (max-width: 1024px) {
+            .lottery-item {
+                width: calc(50% - 20px); /* Ajusta para duas colunas */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .lottery-item {
+                width: 100%; /* Ajusta para uma coluna */
+            }
+        }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1002;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-height: 70%;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Adicionado para permitir a rolagem */
+}
+
+#bonusContent {
+    max-height: 50vh; /* Limita a altura máxima do conteúdo */
+    overflow-y: auto; /* Adiciona barra de rolagem se o conteúdo ultrapassar a altura máxima */
+}
+
+        /* Estilos para a área de itens do carrinho */
+        .cart-items {
+            overflow-y: auto;
+            max-height: 300px; /* Altura máxima para a área de itens */
+            margin-bottom: 20px; /* Espaço para os botões fixos */
+            padding-right: 10px; /* Espaço para a barra de rolagem */
+        }
+
+        /* Estilos para o rodapé do carrinho */
+        .cart-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+            border-top: 1px solid #ccc;
+            background-color: #f9f9f9;
+            position: sticky;
+            bottom: 0;
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos adicionais para o ícone de lixeira */
+        .trash-icon {
+            cursor: pointer;
+            margin-left: 10px;
+            color: #F44336;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .trash-icon:hover {
+            color: #D32F2F;
+        }
+
+        /* Estilos adicionais para o botão de resetar carrinho */
+        .btn-reset-cart {
+            background-color: #F44336;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-reset-cart:hover {
+            background-color: #D32F2F;
+        }
+
+        /* Estilos adicionais para o botão de enviar pelo WhatsApp */
+        .btn-send-whatsapp {
+            background-color: #25D366;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-send-whatsapp:hover {
+            background-color: #1EBE5C;
+        }
+
+        /* Estilos para o botão de fechar */
+        .close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Estilos responsivos para telas menores */
+        @media (max-width: 480px) {
+            .modal-content {
+                width: 90%;
+                max-width: 90%;
+                max-height: 90%;
+            }
+
+            .cart-footer {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn-reset-cart,
+            .btn-send-whatsapp {
+                width: 100%;
+            }
+
+            .cart-items {
+                max-height: 250px;
+            }
+        }
+
+        /* Estilos adicionais para o botão de resetar carrinho */
+        .btn-reset-cart {
+            background-color: #F44336;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-reset-cart:hover {
+            background-color: #D32F2F;
+        }
+
+        /* Estilos adicionais para o botão de enviar pelo WhatsApp */
+        .btn-send-whatsapp {
+            background-color: #25D366;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-send-whatsapp:hover {
+            background-color: #1EBE5C;
+        }
+
+        /* Estilos adicionais para o botão de fechar */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+    
+        .close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .info-text {
+    background-color: #f9f9f9; /* Cor de fundo clara */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 2px; /* Espaçamento interno */
+    margin: 20px; /* Espaçamento superior */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para efeito de profundidade */
+    text-align: center; /* Centraliza o texto */
+    font-size: 18px; /* Tamanho da fonte */
+    line-height: 1.6; /* Altura da linha para melhor legibilidade */
+    color: #333; /* Cor do texto */
+    font-weight: bold; /* Texto em negrito */
+    max-width: 800px; /* Largura máxima */
+    margin-left: auto; /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
+    border: 1px solid #ddd; /* Borda fina */
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Seção de cabeçalho com imagens -->
+    <div class="header">
+        <img src="https://marceloloterias.com/wp-content/uploads/2024/08/top_lf_ind_24.png" alt="Quina de São João 2024">
+    </div>
+    <div class="header-1">
+        <img src="https://marceloloterias.com/wp-content/uploads/2023/07/PREMIOS-ESTIMADO.webp" alt="Quina de São João 2024">
+    </div>
+
+    <!-- Container principal da página -->
+    <div class="container">
+        <!-- Container de vídeo com o vídeo incorporado do YouTube -->
+        <div class="video-container">
+          <div class="arrows-container">
+        <div class="arrow-down">&#9660;</div> <!-- Seta para baixo esquerda -->
+        <div class="arrow-down">&#9660;</div> <!-- Seta para baixo direita -->
+    </div>
+    
+    <iframe width="315" height="560" src="https://www.youtube.com/embed/p7F7yJbQfCE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+    <div class="arrows-container">
+        <div class="arrow-down">&#9660;</div> <!-- Seta para baixo esquerda -->
+        <div class="arrow-down">&#9660;</div> <!-- Seta para baixo direita -->
+    
+    </div>
+</div>
+
+
+        <!-- Botão de visualização das regras -->
+        <div class="button-wrapper">
+            <button class="btn-ver-regras" onclick="showRulesModal()">Ver Regras</button>
+        </div>
+
+        <div class="info-text">
+        <p>Conheça a estratégia de posicionamento de dezenas.
+
+A Lotofácil possui 5 padrões de posicionamento de dezenas, nas primeiras 10 posições de sorteio, são elas:
+<br>> 10 dezenas do 01 ao 14.
+<br>> 10 dezenas do 01 ao 15.
+<br>> 10 dezenas do 01 ao 16.
+<br>> 10 dezenas do 01 ao 17.
+<br>> 10 dezenas do 01 ao 18.
+<br>
+Sabendo disso, vou trabalhar com 8 mil jogos de 15 em cada padrão, esse formato deixa os jogos com garantia de vários 14 pontos e extremamente poderoso na busca dos 15 pontos.</p>
+        </div>
+
+
+
+        <!-- Mensagem de sucesso ao adicionar item ao carrinho -->
+        <div id="success-message" class="success-message" style="display: none;">Cota adicionada ao carrinho!</div>
+
+<!-- Modal de Bônus -->
+<div id="bonusModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeBonusModal()">&times;</span>
+        <h2>Jogos + Bônus(Role para ver todos os jogos)</h2>
+        <div id="bonusContent">
+            <!-- Conteúdo do bônus será inserido aqui -->
+        </div>
+    </div>
+</div>
+
+        <!-- Modal para exibir o carrinho -->
+        <div id="cartModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeCartModal()">&times;</span>
+                <h2>Carrinho</h2>
+                <div id="cartItems" class="cart-items">
+                    <!-- Itens do carrinho serão inseridos aqui -->
+                </div>
+                <div class="cart-footer">
+                    <div id="cartTotal">Total: R$ 0,00</div> <!-- Exibe o total aqui -->
+                    <button class="btn-send-whatsapp" onclick="sendCartToWhatsApp()">Enviar Pedido pelo WhatsApp</button>
+                    <button class="btn-reset-cart" onclick="resetCart()">Zerar Carrinho</button>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Lista de loterias com itens individuais -->
+        <div class="lottery-list">
+            <!-- Cada item de loteria representa um bolão -->
+            <div class="lottery-item">
+                <img src="https://marceloloterias.com/wp-content/uploads/2024/08/BANNER-01_lf_ind_1-scaled.webp" alt="LF-IND-G1">
+                <div class="button-container">
+                    <button class="btn-cota-inteira" onclick="addToCart('LF-IND-G1', 'inteira', 320)">Adicionar Cota
+                        Inteira(R$320)</button>
+                    <button class="btn-meia-cota" onclick="addToCart('LF-IND-G1', 'meia', 160)">Adicionar Meia Cota(R$160)</button>
+                </div>
+                <button class="btn-bonus"
+                    onclick="showBonus('https://docs.google.com/document/d/1Gx8zv5nT7FC5D4PA0t_d56Sb0uv9hGXBZOlyYSoDhD8/edit')">Ver
+                    Jogos e Bônus deste Bolão</button>
+            </div>
+            <div class="lottery-item">
+                <img src="https://marceloloterias.com/wp-content/uploads/2024/08/BANNER-02_lf_ind_1-scaled.webp" alt="LF-IND-G2">
+                <div class="button-container">
+                    <button class="btn-cota-inteira" onclick="addToCart('LF-IND-G2', 'inteira', 320)">Adicionar Cota
+                        Inteira(R$320)</button>
+                    <button class="btn-meia-cota" onclick="addToCart('LF-IND-G2', 'meia', 160)">Adicionar Meia Cota(R$160)</button>
+                </div>
+                <button class="btn-bonus"
+                    onclick="showBonus('https://docs.google.com/document/d/1N951PsULYvVMt9L7D0ZVOGZXkT23tDAyUJ7DQ52dGB8/edit')">Ver
+                    Jogos e Bônus deste Bolão</button>
+            </div>
+            <div class="lottery-item">
+                <img src="https://marceloloterias.com/wp-content/uploads/2024/08/BANNER-03_lf_ind_1-scaled.webp" alt="LF-IND-G3">
+                <div class="button-container">
+                    <button class="btn-cota-inteira" onclick="addToCart('LF-IND-G3', 'inteira', 320)">Adicionar Cota
+                        Inteira(R$320)</button>
+                    <button class="btn-meia-cota" onclick="addToCart('LF-IND-G3', 'meia', 160)">Adicionar Meia Cota(R$160)</button>
+                </div>
+                <button class="btn-bonus"
+                    onclick="showBonus('https://docs.google.com/document/d/1T2gXTGW5F-2kedlRbxP5c-uyhMBVncVMjoldayFKzwA/edit')">Ver
+                    Jogos e Bônus deste Bolão</button>
+            </div>
+            <div class="lottery-item">
+                <img src="https://marceloloterias.com/wp-content/uploads/2024/08/BANNER-04_lf_ind_1-scaled.webp" alt="LF-IND-G4">
+                <div class="button-container">
+                    <button class="btn-cota-inteira" onclick="addToCart('LF-IND-G4', 'inteira', 320)">Adicionar Cota
+                        Inteira(R$320)</button>
+                    <button class="btn-meia-cota" onclick="addToCart('LF-IND-G4', 'meia', 160)">Adicionar Meia Cota(R$160)</button>
+                </div>
+                <button class="btn-bonus"
+                    onclick="showBonus('https://docs.google.com/document/d/1yBo2AGGt-Fck6BWVoDNGIqCNatH1BsA1XKxdCXoitdo/edit')">Ver
+                    Jogos e Bônus deste Bolão</button>
+            </div>
+             <div class="lottery-item">
+                <img src="https://marceloloterias.com/wp-content/uploads/2024/08/BANNER-05_lf_ind_1-scaled.webp" alt="LF-IND-G5">
+                <div class="button-container">
+                    <button class="btn-cota-inteira" onclick="addToCart('LF-IND-G5', 'inteira', 320)">Adicionar Cota
+                        Inteira(R$320)</button>
+                    <button class="btn-meia-cota" onclick="addToCart('LF-IND-G5', 'meia', 160)">Adicionar Meia Cota(R$160)</button>
+                </div>
+                <button class="btn-bonus"
+                    onclick="showBonus('https://docs.google.com/document/d/1TBDOxUyuUN7ZcprKa3eMCCuAhogGHla92FtEA-n6G1U/edit')">Ver
+                    Jogos e Bônus deste Bolão</button>
+            </div>
+             <div class="lottery-item">
+                <img src="https://marceloloterias.com/wp-content/uploads/2024/08/BANNER-06_lf_ind_1-scaled.webp" alt="LF-IND-G6">
+                <div class="button-container">
+                    <button class="btn-cota-inteira" onclick="addToCart('LF-IND-G6', 'inteira', 320)">Adicionar Cota
+                        Inteira(R$320)</button>
+                    <button class="btn-meia-cota" onclick="addToCart('LF-IND-G6', 'meia', 160)">Adicionar Meia Cota(R$160)</button>
+                </div>
+                <button class="btn-bonus"
+                    onclick="showBonus('https://docs.google.com/document/d/1a1doVAQV2yl9A8PVnvQ9tI0zfk-uLf1IYMdMxt3NZd4/edit')">Ver
+                    Jogos e Bônus deste Bolão</button>
+            </div>
+             <div class="lottery-item">
+                <img src="https://marceloloterias.com/wp-content/uploads/2024/08/BANNER-07_lf_ind_1-scaled.webp" alt="LF-IND-G7">
+                <div class="button-container">
+                    <button class="btn-cota-inteira" onclick="addToCart('LF-IND-G7', 'inteira', 320)">Adicionar Cota
+                        Inteira(R$320)</button>
+                    <button class="btn-meia-cota" onclick="addToCart('LF-IND-G7', 'meia', 160)">Adicionar Meia Cota(R$160)</button>
+                </div>
+                <button class="btn-bonus"
+                    onclick="showBonus('https://docs.google.com/document/d/1CwGPG4bs4LxyF-UdoW47NDX-mXzcaPS8TuN3vbT4KxU/edit')">Ver
+                    Jogos e Bônus deste Bolão</button>
+            </div>
+             <div class="lottery-item">
+                <img src="https://marceloloterias.com/wp-content/uploads/2024/08/BANNER-08_lf_ind_1-scaled.webp" alt="LF-IND-G8">
+                <div class="button-container">
+                    <button class="btn-cota-inteira" onclick="addToCart('LF-IND-G8', 'inteira', 320)">Adicionar Cota
+                        Inteira(R$320)</button>
+                    <button class="btn-meia-cota" onclick="addToCart('LF-IND-G8', 'meia', 160)">Adicionar Meia Cota(R$160)</button>
+                </div>
+                <button class="btn-bonus"
+                    onclick="showBonus('https://docs.google.com/document/d/1fp0SOIMLMcIhrh5_O5XMX1EvFPawN27dDJgYGQY9FcQ/edit')">Ver
+                    Jogos e Bônus deste Bolão</button>
+            </div>
+             <div class="lottery-item">
+                <img src="https://marceloloterias.com/wp-content/uploads/2024/08/BANNER-09_lf_ind_1-scaled.webp" alt="LF-IND-G9">
+                <div class="button-container">
+                    <button class="btn-cota-inteira" onclick="addToCart('LF-IND-G9', 'inteira', 320)">Adicionar Cota
+                        Inteira(R$320)</button>
+                    <button class="btn-meia-cota" onclick="addToCart('LF-IND-G9', 'meia', 160)">Adicionar Meia Cota(R$160)</button>
+                </div>
+                <button class="btn-bonus"
+                    onclick="showBonus('https://docs.google.com/document/d/1pE8kN2QbdgOpI9WL03bytya0dJJWQuMDZ5rHx_-2AD0/edit')">Ver
+                    Jogos e Bônus deste Bolão</button>
+            </div> <div class="lottery-item">
+                <img src="https://marceloloterias.com/wp-content/uploads/2024/08/BANNER-10_lf_ind_1-scaled.webp" alt="LF-IND-G10">
+                <div class="button-container">
+                    <button class="btn-cota-inteira" onclick="addToCart('LF-IND-G10', 'inteira', 320)">Adicionar Cota
+                        Inteira(R$320)</button>
+                    <button class="btn-meia-cota" onclick="addToCart('LF-IND-G10', 'meia', 160)">Adicionar Meia Cota(R$160)</button>
+                </div>
+                <button class="btn-bonus"
+                    onclick="showBonus('https://docs.google.com/document/d/1SFtnnWLooXrEQkfBT8xKY2hrTX7qowJQftJjTLFPVFA/edit')">Ver
+                    Jogos e Bônus deste Bolão</button>
+            </div>
+            
+            <!-- Repita para outros bolões -->
+        </div>
+    </div>
+
+    <!-- Botão do Carrinho Flutuante -->
+    <button class="btn-ver-carrinho" onclick="viewCart()">🛒 Ver Carrinho <span class="cart-counter"
+            id="cart-counter">0</span></button>
+
+    <!-- Modal de Bônus -->
+    <div id="bonusModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeBonusModal()">&times;</span>
+            <h2>Bônus do Bolão</h2>
+            <div id="bonusContent">
+                <!-- Conteúdo do bônus será inserido aqui -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Importa o SweetAlert para diálogos modais -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script>
+        // Inicializa o carrinho a partir do localStorage ou cria um array vazio
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Atualiza o contador do carrinho na inicialização
+        updateCartCounter();
+
+        // Função para adicionar um item ao carrinho
+        function addToCart(bolao, tipo, preco) {
+            // Adiciona um novo item ao carrinho
+            cart.push({ bolao, tipo, preco });
+            // Armazena o carrinho atualizado no localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+            // Atualiza o contador do carrinho
+            updateCartCounter();
+            // Mostra uma mensagem de sucesso
+            showSuccessMessage();
+        }
+
+        // Função para atualizar o contador do carrinho
+        function updateCartCounter() {
+            const cartCounter = document.getElementById('cart-counter');
+            cartCounter.innerText = cart.length;
+        }
+
+        // Função para mostrar a mensagem de sucesso
+        function showSuccessMessage() {
+            const successMessage = document.getElementById('success-message');
+            successMessage.style.opacity = 1;
+            successMessage.style.display = 'block';
+            successMessage.style.transform = 'translateY(0)'; // Move a mensagem para a posição correta
+
+            // Oculta a mensagem após 3 segundos
+            setTimeout(() => {
+                successMessage.style.opacity = 0;
+                successMessage.style.transform = 'translateY(-20px)'; // Move de volta para a posição inicial
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 500); // Tempo para a transição
+            }, 3000); // Tempo que a mensagem fica visível
+        }
+
+        // Função para visualizar o carrinho
+        function viewCart() {
+            if (cart.length === 0) {
+                alert('Seu carrinho está vazio.');
+                return;
+            }
+
+            const cartItemsContainer = document.getElementById('cartItems');
+            cartItemsContainer.innerHTML = ''; // Limpa os itens atuais
+
+            let total = 0; // Variável para calcular o total
+            cart.forEach((item, index) => {
+                // Cria um elemento de item no carrinho
+                const itemElement = document.createElement('div');
+                itemElement.innerHTML = `
+            ${item.bolao} (${item.tipo}): R$ ${item.preco.toFixed(2)}
+            <span class="trash-icon" onclick="removeFromCart(${index})">&#128465;</span>
+        `;
+                cartItemsContainer.appendChild(itemElement);
+                total += item.preco; // Calcula o total
+            });
+
+            // Atualiza o total no modal
+            const cartTotalElement = document.getElementById('cartTotal');
+            cartTotalElement.innerText = `Total: R$ ${total.toFixed(2)}`;
+
+            // Exibe o modal do carrinho
+            const cartModal = document.getElementById('cartModal');
+            cartModal.style.display = 'block';
+        }
+
+        // Função para remover um item do carrinho
+        function removeFromCart(index) {
+            // Remove o item do array do carrinho
+            cart.splice(index, 1);
+            // Atualiza o localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+            // Atualiza o contador do carrinho
+            updateCartCounter();
+            // Recarrega a visualização do carrinho
+            viewCart();
+        }
+
+        // Função para enviar o carrinho pelo WhatsApp
+        function sendCartToWhatsApp() {
+            if (cart.length === 0) {
+                alert('Seu carrinho está vazio.');
+                return;
+            }
+
+            let cartDetails = 'Pedido de Bolões:\n';
+            let total = 0;
+            cart.forEach(item => {
+                cartDetails += `- ${item.bolao} (${item.tipo}): R$ ${item.preco.toFixed(2)}\n`;
+                total += item.preco;
+            });
+
+            cartDetails += `\nTotal: R$ ${total.toFixed(2)}`;
+
+            // Mostra um alerta sobre o pagamento
+            swal({
+                title: "Informação",
+                text: "As cotas devem ser pagas até dia 06/09/2024",
+                icon: "info",
+                buttons: {
+                    confirm: {
+                        text: "OK",
+                        closeModal: true
+                    }
+                }
+            }).then(() => {
+                // Abre o WhatsApp com os detalhes do carrinho
+                const phoneNumber = "+5551984036223";
+                const message = encodeURIComponent(cartDetails);
+                const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
+
+                window.open(whatsappUrl, '_blank');
+            });
+        }
+
+        // Função para resetar o carrinho
+        function resetCart() {
+            // Limpa o array do carrinho e atualiza o localStorage
+            cart = [];
+            localStorage.removeItem('cart');
+
+            // Atualiza o contador do carrinho
+            updateCartCounter();
+
+            // Limpa a visualização dos itens no modal
+            const cartItemsContainer = document.getElementById('cartItems');
+            cartItemsContainer.innerHTML = '<p>Seu carrinho está vazio.</p>'; // Mensagem de carrinho vazio
+
+            // Atualiza o total no modal
+            const cartTotalElement = document.getElementById('cartTotal');
+            cartTotalElement.innerText = 'Total: R$ 0,00';
+
+            // Mostra uma mensagem de confirmação
+            swal("Carrinho Zerado", "Seu carrinho foi esvaziado com sucesso.", "success");
+        }
+
+        // Função para mostrar o modal de regras
+function showRulesModal() {
+    const content = document.createElement('div');
+    content.innerHTML = "Comprando todos os bolões tem 10% de desconto e pode mandar um palpite de 20 dezenas para concorrer a 3.200 reais no pix se 15 pontos no palpite.<br><br>Cada bolão divide os prêmios que derem nos seus bônus. <br><br>divide por 20 na fonte [sites onde comprei] e depois por 55 cotas do grupo <br><br>data limite para pagamento até 06/09/24, pagando até 31/08/24 tem 5% desconto.<br><br>Todos os comprovante do pagamento referente aos bolões serão postados nos grupos do whatsapp no dia do sorteio ";
+
+    swal({
+        title: "Regras do Bolão",
+        content: content,
+        icon: "info"
+    });
+}
+
+
+// Função para mostrar a modal de bônus e carregar o conteúdo via AJAX
+function showBonus(docUrl) {
+    const modal = document.getElementById('bonusModal');
+    const bonusContent = document.getElementById('bonusContent');
+
+    // Limpa o conteúdo anterior
+    bonusContent.innerHTML = 'Carregando...';
+
+    // Faz a requisição AJAX para o servidor
+    fetch(`https://marceloloterias.com/wp-content/themes/flatsome/pag-html/get_bonus.php?url=${encodeURIComponent(docUrl)}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                bonusContent.innerHTML = 'Erro: ' + data.error;
+            } else {
+                // Atualiza o conteúdo da modal com a resposta do servidor
+                bonusContent.innerHTML = data.content;
+            }
+        })
+        .catch(error => {
+            // Exibe mensagem de erro caso a requisição falhe
+            bonusContent.innerHTML = 'Erro ao carregar bônus. Por favor, tente novamente.';
+            console.error('Erro ao carregar bônus:', error);
+        });
+
+    // Exibe a modal
+    modal.style.display = "block";
+}
+
+
+
+    // Função para fechar a modal de bônus
+    function closeBonusModal() {
+        const modal = document.getElementById('bonusModal');
+        modal.style.display = "none";
+        const bonusContent = document.getElementById('bonusContent');
+        bonusContent.innerHTML = ''; // Limpa o conteúdo da modal ao fechar
+    }
+
+    // Fechar a modal clicando fora dela
+    window.onclick = function(event) {
+        const modal = document.getElementById('bonusModal');
+        if (event.target === modal) {
+            closeBonusModal();
+        }
+    }
+
+        // Função para fechar o modal do carrinho
+        function closeCartModal() {
+            const cartModal = document.getElementById('cartModal');
+            cartModal.style.display = 'none';
+        }
+
+        // Fechar o modal clicando fora dele
+        window.onclick = function (event) {
+            const cartModal = document.getElementById('cartModal');
+            const bonusModal = document.getElementById('bonusModal');
+            if (event.target === cartModal) {
+                cartModal.style.display = "none";
+            }
+            if (event.target === bonusModal) {
+                bonusModal.style.display = "none";
+            }
+        }
+
+        // Função para rolagem automática
+        function autoScroll() {
+            let userScrolled = false;
+
+            // Escuta eventos de rolagem para detectar se o usuário rolou a página
+            window.addEventListener('scroll', () => {
+                userScrolled = true;
+            });
+
+            // Define um timer para rolar a página após 5 segundos
+            setTimeout(() => {
+                if (!userScrolled) {
+                    // Rola a página suavemente para baixo
+                    window.scrollTo({
+                        top: window.innerHeight, // Define a posição de rolagem desejada
+                        behavior: 'smooth' // Faz a rolagem ser suave
+                    });
+                }
+            }, 5000); // Tempo em milissegundos (5 segundos)
+        }
+
+        // Chama a função de rolagem automática ao carregar a página
+        window.onload = autoScroll;
+    </script>
+
+    <script>
+// Função para registrar interações
+function logInteraction(interaction) {
+    // Cria um objeto com os dados da interação
+    const data = new URLSearchParams();
+    data.append('interaction', interaction);
+
+    // Envia os dados ao script PHP via AJAX
+    fetch('https://marceloloterias.com/wp-content/themes/flatsome/pag-html/log_interactions.php', {
+        method: 'POST',
+        body: data,
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === 'success') {
+            console.log('Interação registrada com sucesso:', interaction);
+        } else {
+            console.error('Erro ao registrar interação:', data.message);
+        }
+    })
+    .catch(error => console.error('Erro ao enviar dados:', error));
+}
+
+// Monitorar cliques no botão de visualizar regras
+document.querySelector('.btn-ver-regras').addEventListener('click', function() {
+    logInteraction('Visualizou Regras');
+});
+
+// Monitorar cliques no botão de adicionar cota inteira ao carrinho
+document.querySelectorAll('.btn-cota-inteira').forEach(function(button) {
+    button.addEventListener('click', function() {
+        logInteraction('Adicionou Cota Inteira ao Carrinho');
+    });
+});
+
+// Monitorar cliques no botão de adicionar meia cota ao carrinho
+document.querySelectorAll('.btn-meia-cota').forEach(function(button) {
+    button.addEventListener('click', function() {
+        logInteraction('Adicionou Meia Cota ao Carrinho');
+    });
+});
+
+// Monitorar cliques no botão de enviar pedido pelo WhatsApp
+document.querySelector('.btn-send-whatsapp').addEventListener('click', function() {
+    logInteraction('Enviou Pedido pelo WhatsApp');
+});
+
+// Monitorar cliques no botão de enviar pedido pelo WhatsApp
+document.querySelector('.btn-ver-carrinho').addEventListener('click', function() {
+    logInteraction('abriu carrinho');
+});
+
+
+// Monitorar cliques no botão de enviar pedido pelo WhatsApp
+document.querySelector('.btn-bonus').addEventListener('click', function() {
+    logInteraction('abriu bonus');
+});
+
+
+// Monitorar acesso à página
+window.addEventListener('load', function() {
+    logInteraction('Acessou a Página');
+});
+
+const observer = new MutationObserver(function(mutationsList, observer) {
+    mutationsList.forEach(function(mutation) {
+        if (mutation.type === 'childList') {
+            mutation.addedNodes.forEach(function(node) {
+                if (node.tagName === 'VIDEO') {
+                    node.addEventListener('play', function() {
+                        logInteraction('Iniciou Reprodução de Vídeo');
+                    });
+                }
+            });
+        }
+    });
+});
+
+observer.observe(document.body, { childList: true, subtree: true });
+
+
+// Monitorar saída da página
+window.addEventListener('beforeunload', function() {
+    logInteraction('Saiu da Página');
+});
+
+</script>
+
+</body>
+
+</html>
