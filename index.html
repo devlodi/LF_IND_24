@@ -984,7 +984,7 @@ function showBonus(docUrl) {
     bonusContent.innerHTML = 'Carregando...';
 
     // Faz a requisição AJAX para o servidor
-    fetch(`https://marceloloterias.com/wp-content/themes/flatsome/pag-html/get_bonus.php?url=${encodeURIComponent(docUrl)}`)
+    fetch(`get_bonus.php?url=${encodeURIComponent(docUrl)}`)
         .then(response => response.json())
         .then(data => {
             if (data.error) {
