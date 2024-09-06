@@ -15,9 +15,12 @@ if (isset($_GET['url'])) {
         exit();
     }
 
+    // Escapa o conteúdo HTML do Google Docs antes de enviá-lo
+    $escapedData = htmlspecialchars($data, ENT_QUOTES, 'UTF-8');
+
     // Converte o conteúdo do Google Docs para JSON e envia para o front-end
     header('Content-Type: application/json');
-    echo json_encode(["content" => $data]);
+    echo json_encode(["content" => $escapedData]);
 } else {
     echo json_encode(["error" => "Nenhuma URL fornecida."]);
 }
